@@ -1,10 +1,13 @@
 <template>
   <v-container class="container">
-    <h3>Bruto a Neto</h3>
+    <v-card-title>
+      <span class="text-h6 font-weight-light">Bruto a Neto</span>
+    </v-card-title>
     <div class="netoForm" cols="12">
       <v-combobox v-model="añoData" :items="años" label="Año" outlined dense></v-combobox>
       <v-combobox v-model="periodoData" :items="periodo" label="Periodo" outlined dense></v-combobox>
-      <v-text-field v-if="periodoData == 'Diario'" v-model="diasData" label="Días a calcular" outlined dense></v-text-field>
+      <v-text-field v-if="periodoData == 'Diario'" v-model="diasData" label="Días a calcular" outlined
+        dense></v-text-field>
       <v-text-field v-model="ingresoBruto" label="Bruto" aria-required="true" outlined dense></v-text-field>
       <div class="btn-container">
         <v-btn depressed color="primary" @click="calculaNeto()">
@@ -83,5 +86,6 @@ export default {
 <style>
 .btn-container {
   margin-bottom: 27px;
+  /* color: #48ad6a */
 }
 </style>
