@@ -1,28 +1,25 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-app>
+    <v-main>
+      <!-- <FormBrutoNeto /> -->
+      <FormNetoBruto />
+    </v-main>
+  </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+/* import FormBrutoNeto from "./components/FormBrutoNeto.vue" */
+import FormNetoBruto from "./components/FormNetoBruto.vue";
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
-}
-</script>
+    /* FormBrutoNeto, */
+    FormNetoBruto
+},
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+  data: () => ({
+    //
+  }),
+};
+</script>
